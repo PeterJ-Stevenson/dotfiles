@@ -77,6 +77,34 @@ bash install.sh notes      # print the checklist
 
 ## Dependencies
 
-Core (pacman): `i3-wm i3lock py3status picom dunst rofi feh terminator flameshot brightnessctl xss-lock xautolock imagemagick keychain keepassxc fzf zoxide direnv conky`
+**Core (pacman):** `i3-wm i3lock py3status picom dunst rofi feh terminator flameshot brightnessctl xss-lock xautolock imagemagick keychain keepassxc autorandr lxappearance qt5ct qt6ct polkit-gnome xdg-user-dirs pamixer playerctl fzf zoxide direnv conky`
 
-AUR: `oh-my-posh-bin spotify pa-applet-git obsidian code-insiders`
+**AUR:** `oh-my-posh-bin spotify pa-applet-git pwvucontrol obsidian code-insiders`
+
+**Note:** i3 runs on **X11 only**. If you ever want Wayland, switch to sway (same config format, different toolchain).
+
+## Audio
+
+CachyOS uses PipeWire. `pipewire-pulse` provides PulseAudio compatibility so pavucontrol still works, but `pwvucontrol` is the native PipeWire alternative. Volume keys use `pamixer`, media keys use `playerctl` (works with Spotify and any MPRIS player).
+
+## Theming
+
+After install, run:
+- `lxappearance` — set GTK theme/icons/cursor
+- `qt6ct` — set Qt theme to match
+
+Add to `.bashrc`:
+```bash
+export QT_QPA_PLATFORMTHEME=qt6ct
+```
+
+## autorandr
+
+Save your screen layouts once they're set up:
+```bash
+autorandr --save laptop
+autorandr --save office
+autorandr --save home
+```
+
+Then `autorandr --change` applies the right profile automatically when monitors are plugged/unplugged.

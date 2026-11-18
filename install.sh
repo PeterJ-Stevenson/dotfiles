@@ -49,9 +49,17 @@ install_packages() {
         network-manager-applet \
         blueman \
         pavucontrol \
+        pamixer \
+        playerctl \
         imagemagick \
         keychain \
         keepassxc \
+        autorandr \
+        lxappearance \
+        qt5ct \
+        qt6ct \
+        polkit-gnome \
+        xdg-user-dirs \
         fzf \
         zoxide \
         direnv \
@@ -78,6 +86,7 @@ install_packages() {
         oh-my-posh-bin \
         spotify \
         pa-applet-git \
+        pwvucontrol \
         obsidian \
         code-insiders
 
@@ -138,9 +147,17 @@ post_install_notes() {
     info "6. py3status / conky: the i3status bar uses conky for memory/disk/load."
     info "   Make sure conky is installed and py3status can find it."
     info ""
-    info "7. Spotify on CachyOS uses PipeWire. If audio is broken, try:"
-    info "   spotify (no --audio-api flag needed with pipewire-pulse installed)"
-    info "   Update the exec line in ~/.config/i3/config if needed."
+    info "7. Spotify: no --audio-api flag needed on CachyOS (pipewire-pulse handles it)."
+    info ""
+    info "8. GTK/Qt themes: run lxappearance (GTK) and qt6ct (Qt) to set a consistent theme."
+    info "   Set QT_QPA_PLATFORMTHEME=qt6ct in your .bashrc so Qt apps pick it up."
+    info ""
+    info "9. autorandr: after setting up your screen layouts, save them:"
+    info "   autorandr --save home"
+    info "   autorandr --save office"
+    info "   autorandr --save laptop"
+    info "   Then 'autorandr --change' auto-applies the right one on plug/unplug."
+    info "   Add 'exec --no-startup-id autorandr --change' to i3 config if wanted."
     info "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 }
 
