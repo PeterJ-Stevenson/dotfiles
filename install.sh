@@ -28,7 +28,6 @@ install_packages() {
     info "Installing core packages..."
     sudo pacman -S --needed --noconfirm \
         i3-wm \
-        i3lock \
         i3status \
         py3status \
         picom \
@@ -39,7 +38,6 @@ install_packages() {
         flameshot \
         brightnessctl \
         xss-lock \
-        xautolock \
         xorg-xset \
         xorg-xrdb \
         xorg-xrandr \
@@ -65,7 +63,6 @@ install_packages() {
         direnv \
         mpg123 \
         conky \
-        python-py3status \
         firefox \
         nemo \
         kubectl
@@ -88,7 +85,8 @@ install_packages() {
         pa-applet-git \
         pwvucontrol \
         obsidian \
-        code-insiders
+        code-insiders \
+        xautolock
 
     info "Optional work apps (uncomment what you use):"
     info "  $AUR -S slack-desktop teams-for-linux-bin outlook-for-linux mattermost-desktop"
