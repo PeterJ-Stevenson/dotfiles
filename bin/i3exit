@@ -1,0 +1,31 @@
+#!/bin/sh
+# i3 session actions — replacement for Manjaro's /usr/bin/i3exit
+[ "$(cat /proc/1/comm)" = "systemd" ] && logind=systemctl || logind=loginctl
+
+case "$1" in
+    lock)
+        "$HOME/bin/lock"
+        ;;
+    logout)
+        i3-msg exit
+        ;;
+    switch_user)
+        dm-tool switch-to-greeter
+        ;;
+    suspend)
+        "$HOME/bin/lock" && $logind suspend
+        ;;
+    hibernate)
+        "$HOME/bin/lock" && $logind hibernate
+        ;;
+    reboot)
+        $logind reboot
+        ;;
+    shutdown)
+        $logind poweroff
+        ;;
+    *)
+        echo "Usage: i3exit lock | logout | switch_user | suspend | hibernate | reboot | shutdown"
+        exit 2
+esac
+exit 0

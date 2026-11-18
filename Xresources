@@ -1,0 +1,114 @@
+: 96
+Xft.antialias: 1
+Xft.rgba: rgb
+Xft.autohint: 0
+Xft.lcdfilter: lcddefault
+Xft.hinting: 1
+Xft.hintstyle: hintfull
+
+Xcursor.size: 16
+!------------------------------------------------------------------------------
+! c o l o r -  s e t t i n g s
+
+*background: #222222
+*foreground: #3385D6
+
+! Default
+! 0: black
+*color0:  #222222
+*color8:  #222222
+! 1: red
+*color1:  #9f6767
+*color9:  #9f6767
+! 2: green
+*color2:  #92ac68
+*color10: #92ac68
+! 3: yellow
+*color3:  #d0d293
+*color11: #d0d293
+! 4: blue
+*color4:  #9aacc3
+*color12: #9aacc3
+! 5: magenta
+*color5:  #bb77a4
+*color13: #bb77a4
+! 6: cyan
+*color6:  #77bbb5
+*color14: #77bbb5
+! 7: white
+*color7:  #777777
+*color15: #777777
+
+URxvt*termName: rxvt-unicode
+URxvt.font: xft:Ubuntu Mono:size=14:hintstyle=hintfull,style=regular
+URxvt.boldFont: xft:Ubuntu Mono:size=14:hintstyle=hintfull,style=regular
+URxvt.italicFont: xft:Ubuntu Mono:saize=14:hintstyle=hintfull,style=regular
+URxvt.boldItalicFont: xft:Ubuntu Mono:size=14:hintstyle=hintfull,style=regular
+URxvt*scrollBar:                false
+URxvt*scrollBar_right:          true
+URxvt*scrollColor:              #000000
+URxvt.depth:                    32
+URxvt.background:               [80]#1B1B1B
+URxvt.imLocale:                 en_DK.utf8
+URxvt*locale:                   true
+URxvt.cursorColor: magenta
+URxvt*scrollTtyOutput:  false
+URxvt*scrollWithBuffer:  true
+URxvt*scrollTtyKeypress: true
+URxvt.urgentOnBell:  true
+URxvt.saveLines:  200000
+
+URxvt.keysym.Home: \033[1~
+URxvt.keysym.End: \033[4~
+URxvt.keysym.KP_Home: \033[1~
+URxvt.keysym.KP_End:  \033[4~
+
+URxvt.keysym.C-Up:     font-size:increase
+URxvt.keysym.C-Down:   font-size:decrease
+URxvt.keysym.C-S-Up:   font-size:incglobal
+URxvt.keysym.C-S-Down: font-size:decglobal
+URxvt.keysym.C-equal:  font-size:reset
+URxvt.keysym.C-slash:  font-size:show
+
+URxvt*inheritPixmap: true
+URxvt*transparent: true
+! URxvt*shading: 0 to 99 darkens, 101 to 200 lightens
+URxvt*shading: 10
+
+urxvt*foreground: #bea492
+urxvt*cursorColor: #9a875f
+urxvt*colorIT: #8c644c
+urxvt*colorUL: #646a6d
+urxvt*colorBD: #9a875f
+
+!! black dark/light
+urxvt*color0: #332d29
+urxvt*color8: #817267
+
+!! red dark/light
+urxvt*color1: #b30202
+urxvt*color9: #ff0000
+
+!! green dark/light
+urxvt*color2:  #024d04
+urxvt*color10:  #00ff08
+
+!! yellow dark/light
+urxvt*color3:  #c9b500
+urxvt*color11:   #ffe600
+
+!! blue dark/light
+urxvt*color4: #0099ff
+urxvt*color12: #66d0fa
+
+!! magenta dark/light
+urxvt*color5: #605655
+urxvt*color13: #656565
+
+!! cyan dark/light
+urxvt*color6: #4B5C5E
+urxvt*color14: #556D70
+
+!! white dark/light
+urxvt*color7: #504339
+urxvt*color15: #9a875f

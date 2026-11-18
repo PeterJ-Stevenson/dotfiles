@@ -1,0 +1,33 @@
+[global_config]
+  focus = mouse
+  inactive_color_offset = 0.850609756097561
+[keybindings]
+  new_tab = <Shift>Down
+  go_next = ""
+  go_prev = ""
+  go_up = ""
+  go_down = ""
+  go_left = ""
+  go_right = ""
+  next_tab = <Shift>Right
+  prev_tab = <Shift>Left
+[profiles]
+  [[default]]
+    background_darkness = 0.8
+    background_type = transparent
+    font = JetBrains Mono NL Medium 13
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_infinite = True
+    use_system_font = False
+    copy_on_selection = True
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = default
+[plugins]
