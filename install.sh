@@ -109,10 +109,13 @@ install_dotfiles() {
     link "$DOTFILES/screenlayout/office.sh"  "$HOME/.screenlayout/office.sh"
     link "$DOTFILES/screenlayout/home.sh"    "$HOME/.screenlayout/home.sh"
 
-    for f in updateWallpaper.sh blackOut.sh stayOn.sh typeclipboard.sh i3exit lock; do
+    for f in updateWallpaper.sh blackOut.sh stayOn.sh typeclipboard.sh i3exit lock lightdm-random-bg.sh; do
         link "$DOTFILES/bin/$f" "$HOME/bin/$f"
         chmod +x "$DOTFILES/bin/$f"
     done
+
+    info "NOTE: lightdm-random-bg.sh also needs a systemd unit at /etc/systemd/system/lightdm-random-bg.service"
+    info "      See README or run: sudo systemctl enable lightdm-random-bg.service"
 
     # Make sure ~/bin is in PATH (check your .bashrc)
     if ! echo "$PATH" | grep -q "$HOME/bin"; then
